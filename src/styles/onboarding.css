@@ -1,0 +1,259 @@
+.onboarding-page {
+  min-height: calc(100vh - var(--nav-height));
+  padding: 64px 20px 80px;
+  background: var(--color-surface);
+  display: flex;
+  justify-content: center;
+}
+.onboarding-inner {
+  width: 100%;
+  max-width: 720px;
+}
+.onboarding-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  margin-bottom: 12px;
+}
+.onboarding-title {
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.onboarding-sub {
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+.onboarding-other-input {
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+.assessment-preview-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: -8px 0 28px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.assessment-preview-strip span {
+  padding: 10px 18px 10px 0;
+  margin-right: 18px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  letter-spacing: .02em;
+}
+.assessment-preview-strip span + span {
+  border-left: 1px solid var(--color-border);
+  padding-left: 18px;
+}
+.assessment-preview-strip strong {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+.role-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.role-select-card {
+  position: relative;
+  text-align: left;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.role-select-card:hover {
+  border-color: var(--color-black);
+}
+.role-select-card-active {
+  border-color: var(--color-green);
+  background: var(--color-green-tint);
+}
+.role-select-icon {
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.role-select-title {
+  font-weight: 700;
+  font-size: 14.5px;
+}
+.role-select-category {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+.role-select-check {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--color-green-dark);
+}
+
+@media (max-width: 620px) {
+  .role-select-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Quiz ---------- */
+.quiz-page {
+  min-height: calc(100vh - var(--nav-height));
+  padding: 56px 20px 80px;
+  background: var(--color-surface);
+  display: flex;
+  justify-content: center;
+}
+.quiz-inner {
+  width: 100%;
+  max-width: 640px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.quiz-role-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+.quiz-progress-track {
+  height: 6px;
+  background: var(--color-surface);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.quiz-progress-fill {
+  height: 100%;
+  background: var(--color-green);
+  transition: width 0.3s ease;
+}
+.quiz-question {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-size: 14.5px;
+}
+.quiz-option:hover {
+  border-color: var(--color-black);
+}
+.quiz-option-selected {
+  border-color: var(--color-green);
+  background: var(--color-green-tint);
+}
+.quiz-option-marker {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.quiz-option-selected .quiz-option-marker {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .quiz-inner {
+    padding: 28px 22px;
+  }
+}
+
+/* ---------- Assessment result ---------- */
+.result-inner {
+  max-width: 640px;
+}
+.result-role-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 24px 0 36px;
+}
+.result-role-label {
+  font-size: 12.5px;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.result-role-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+.result-ring-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 36px;
+}
+.result-ring-caption {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+.result-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+@media (max-width: 560px) {
+  .result-ring-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
